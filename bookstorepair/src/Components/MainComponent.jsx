@@ -40,30 +40,20 @@ class MainComponent extends React.Component {
           </Col>
 
           {BooksFantasy.filter(
-            dish =>
-              dish.title.toLowerCase().includes(this.state.searchString) || dish.category.toLowerCase().includes(this.state.searchString)
+            books =>
+              books.title.toLowerCase().includes(this.state.searchString) || books.category.toLowerCase().includes(this.state.searchString)
           ).map((bookEntry, index) => (
             <Col md='3'>
-              <SingleBook dish={bookEntry} key={index} />
+              <SingleBook books={bookEntry} key={index} />
             </Col>
           ))}
         </Row>
 
-        {/* Every time you have a map or a foreach, remember to specify the KEY for each item you are creating.
-                      Key is a props, usually you can use the second parameter of map or foreach as unique identified
-                      example:
-                      */}
-        {/*       <Row>
-          {BooksFantasy.map((bookEntry, index) => (
-            <Col md='3'>
-              <SingleBook dish={bookEntry} key={index} />
-            </Col>
-          ))} */}
         <Row>
           {BooksFantasy.map((bookEntry, index) => (
             <Col md='3' id='#titles'>
               <ul>
-                <BookListComponent dish={bookEntry} key={index} />
+                <BookListComponent books={bookEntry} key={index} />
               </ul>
             </Col>
           ))}

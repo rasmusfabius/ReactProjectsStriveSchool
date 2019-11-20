@@ -8,9 +8,9 @@ class SingleBook extends React.Component {
     return (
       <div>
         <Card>
-          <CardImg top width='100%' src={this.props.dish.img} alt='Generic placeholder image' />
+          <CardImg top width='100%' src={this.props.books.img} alt='Generic placeholder image' />
           <CardBody>
-            <CardTitle>{this.props.dish.title}</CardTitle>
+            <CardTitle>{this.props.books.title}</CardTitle>
           </CardBody>
         </Card>
       </div>
