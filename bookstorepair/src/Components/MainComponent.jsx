@@ -9,7 +9,8 @@ import BookListComponent from './BookListComponent';
 
 class MainComponent extends React.Component {
   state = {
-    searchString: ''
+    searchString: '',
+    view: 'cover'
   };
 
   searchBook = ev => {
@@ -25,8 +26,8 @@ class MainComponent extends React.Component {
         <Row>
           <Col md='12'>
             <HeaderComponent />
-            <Button>COVERS</Button>
-            <Button>LIST</Button>
+            <Button onClick={() => this.setState({ view: 'cover' })}>COVERS</Button>
+            <Button onClick={() => this.setState({ view: 'list' })}>LIST</Button>
           </Col>
 
           <Col md='12'>
@@ -38,31 +39,36 @@ class MainComponent extends React.Component {
               className='mb-5'
             />
           </Col>
-
-          {BooksFantasy.filter(
-            books =>
-              books.title.toLowerCase().includes(this.state.searchString) || books.category.toLowerCase().includes(this.state.searchString)
-          ).map((bookEntry, index) => (
-            <Col md='3'>
-              <SingleBook books={bookEntry} key={index} />
-            </Col>
-          ))}
+          {this.state.view == 'cover' && (
+            <>
+              {BooksFantasy.filter(
+                books =>
+                  books.title.toLowerCase().includes(this.state.searchString) ||
+                  books.category.toLowerCase().includes(this.state.searchString)
+              ).map((bookEntry, index) => (
+                <Col md='3'>
+                  <SingleBook books={bookEntry} key={index} />
+                </Col>
+              ))}
+            </>
+          )}
         </Row>
 
-        <Row>
-          {BooksFantasy.map((bookEntry, index) => (
-            <Col md='3' id='#titles'>
-              <ul>
-                <BookListComponent books={bookEntry} key={index} />
-              </ul>
-            </Col>
-          ))}
+        {this.state.view == 'list' && (
+          <Row>
+            {BooksFantasy.map((bookEntry, index) => (
+              <Col md='3' id='#titles'>
+                <ul>
+                  <BookListComponent books={bookEntry} key={index} />
+                </ul>
+              </Col>
+            ))}
 
-          <FooterComponent />
-        </Row>
+            <FooterComponent />
+          </Row>
+        )}
       </Container>
     );
   }
 }
-
 export default MainComponent;
