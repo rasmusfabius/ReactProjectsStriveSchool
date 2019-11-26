@@ -5,11 +5,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white !important;
-  background-color: #343a40;
+  background-color: #161513;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.navbar {
+  background-color: #161513 !important;
 }
 
 .navbar-light .navbar-brand {
@@ -17,4 +21,9 @@ code {
 }
 .navbar-light .navbar-nav .nav-link {
   color: white;
+}
+
+img {
+  width: 50%;
+  height: 80%;
 }
