@@ -1,0 +1,268 @@
+body {
+  background: rgb(46, 63, 87);
+  background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33, 44, 61, 1) 42%, rgb(15, 21, 29) 100%);
+}
+
+/*SIDEBAR SECTION*/
+.navbar.fixed-left {
+  bottom: 0;
+  width: 232px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.navbar.fixed-left {
+  right: auto;
+}
+
+.navbar.fixed-left .navbar-collapse {
+  flex-grow: 0;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar-expand-md {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav {
+  flex-direction: column;
+  width: 100%;
+}
+
+.bg-navbar {
+  background-color: black;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a {
+  color: rgb(145, 145, 145) !important;
+  transition: 0.3s;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+  border-left: 1px solid rgb(60, 211, 60);
+  color: white !important;
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 3px;
+}
+
+.nav-btn {
+  margin-bottom: 100px;
+}
+
+.nav-btn a {
+  padding-left: 8px;
+  color: rgb(145, 145, 145);
+}
+
+.signup-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.login-btn:hover {
+  color: white;
+}
+
+/* BOTTOM PLAYER SECTION*/
+.custom-nav-bt {
+  display: none;
+  height: 5.5rem;
+  background-color: #282828;
+}
+
+.bg-container {
+  height: 5.5rem;
+  background-color: #282828;
+}
+
+.playerControls a img {
+  width: 14px;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  filter: brightness(60%);
+}
+
+.playerControls a:hover {
+  filter: brightness(80%);
+  color: #282828 !important;
+}
+
+.progress {
+  color: white;
+  background-color: #414141;
+  margin-left: 40px;
+  width: 500px;
+  height: 3px;
+}
+
+.playBar p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+/*MAIN PAGE SECTION*/
+
+.mainLinks {
+  margin-left: 15rem;
+  margin-top: 1.5rem;
+}
+
+.mainLinks a {
+  color: white;
+  margin-left: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.3;
+}
+
+.mainLinks a:hover {
+  text-decoration: none;
+  opacity: 1;
+  border-bottom: 1px solid rgb(60, 211, 60);
+  transition: 0.3s;
+}
+
+.imgLinks a p,
+.mainPage p a {
+  padding-top: 8px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+.mainPage p a:hover {
+  color: rgb(138, 138, 138);
+}
+
+.imgLinks a:hover {
+  text-decoration: none;
+}
+
+.imgLinks a img:hover {
+  filter: brightness(50%);
+}
+
+#rock,
+#pop,
+#hiphop,
+#artist-tracks {
+  padding-left: 4.5rem;
+  color: white;
+  font-weight: 700;
+  padding-top: 50px;
+}
+
+.scrollFlow {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 100vh;
+}
+
+.mainPage img {
+  width: 200px;
+}
+
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  background: rgb(46, 63, 87);
+  background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33, 44, 61, 1) 42%, rgb(15, 21, 29) 100%);
+}
+
+.trackHover:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.trackHover a {
+  text-decoration: none;
+}
+
+#btnPlay {
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.durationClass {
+  float: right;
+}
+
+.mainButton {
+  border: 1px solid #fff !important;
+  border-radius: 20px !important;
+  height: 2.2em !important;
+  width: 7em;
+  text-align: center;
+  padding: 0px 10px !important;
+}
+
+.titleMain {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#hipHopSection {
+  margin-bottom: 7rem;
+}
+
+#followers {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.album-title {
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 0;
+}
+
+.artist-name {
+  color: white;
+}
